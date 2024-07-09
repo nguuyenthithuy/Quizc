@@ -1,0 +1,57 @@
+.layout-default {
+  &__header {
+    background-color: orange;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__main {
+    padding: 20px;
+  }
+  &__footer {
+    padding: 10px 20px;
+    background-color: orange;
+    text-align: center;
+  }
+}
+.menu {
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-left: 20px;
+      position: relative;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: black;
+    &--active {
+      color: white;
+    }
+  }
+  &__sub {
+    position: absolute;
+    top: 100%;
+    background: orangered;
+    right: 0;
+    display: none !important;
+    flex-direction: column;
+    li {
+      margin-left: 0 !important;
+    }
+
+    a {
+      white-space: nowrap;
+      display: block;
+      padding: 4px 10px;
+    }
+  }
+  li:hover > &__sub {
+    display: flex !important;
+  }
+}
